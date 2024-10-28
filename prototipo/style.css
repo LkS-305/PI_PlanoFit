@@ -1,0 +1,510 @@
+/* Resetando padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none   ;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1f1f1f;
+    color: #fff;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.link-logo {
+    cursor: pointer;
+    text-decoration: none;
+}
+.logo h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.logo h1 span {
+    color: #6a0dad;
+}
+
+.logo p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.top-image img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Menu de navegação */
+nav {
+    background-color: #6a0dad;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+/* Estilos para os links do menu */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #4b0082;
+    color: #fff;
+}
+
+/* Seção Principal */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.image-content img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.plan-section h2 {
+    font-size: 2.5rem;
+    color: #6a0dad;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.planos {
+    display: flex;
+    gap: 20px;
+}
+
+.plano {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.plano:hover {
+    transform: translateY(-10px);
+}
+
+.plano h3 {
+    background-color: #6a0dad;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.basico {
+    background-color: #2e2e2e;
+}
+
+.premium {
+    background-color: #4b0082;
+}
+
+.plano ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.plano ul li {
+    padding: 10px 0;
+    font-size: 1.1rem;
+}
+
+
+/* Adições para os inputs e seleção do questionário */
+#Digite ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#Digite ul li {
+    text-align: center;
+}
+
+label {
+    font-size: 1.2rem;
+    background-color: #000;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+input[type="number"],
+select {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+input[type="number"]::placeholder {
+    color: #6a0dad;
+}
+
+select {
+    appearance: none;
+    background-color: #000;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Estilo especial para inputs grandes (altura, peso, idade) */
+#Digite input[type="number"] {
+    background-color: #9370DB;
+    color: white;
+    font-size: 1.5rem;
+    width: 150px;
+    height: 100px;
+    border-radius: 20px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Botão Próximo */
+button {
+    background-color: #d3d3d3;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    color: #000;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #6a0dad;
+    color: white;
+}
+
+
+/* Seção de Objetivos */
+#objetivos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Garante que os itens se ajustem caso a tela seja menor */
+    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Limita a largura máxima */
+    margin-left: auto;
+    margin-right: auto;
+    gap: 20px; /* Adiciona espaço entre os elementos */
+}
+
+.obj, .obj-2 {
+    background-color: #9370DB;
+    padding: 20px;
+    border-radius: 20px;
+    flex: 1; /* Faz com que ambos ocupem o mesmo espaço disponível */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 300px; /* Garante que as caixas não fiquem muito pequenas em telas menores */
+}
+
+.obj label, .obj-2 label {
+    font-size: 1.5rem;
+    background-color: #000;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.obj select, .obj-2 select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.obj ul, .obj-2 ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.obj ul li, .obj-2 ul li {
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 5px;
+}
+
+.obj ul li::before, .obj-2 ul li::before {
+    content: "• ";
+    color: black;
+    font-weight: bold;
+}
+
+
+/* Seção de seleção de músculo */
+#selecione-musculo {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: #f8f8f8;
+}
+
+#selecione-musculo ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+#selecione-musculo ul li {
+    display: flex;
+    justify-content: center;
+}
+
+#selecione-musculo ul li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#selecione-musculo ul li div:hover {
+    transform: scale(1.05);
+}
+
+#selecione-musculo ul li div button {
+    background-color: transparent;
+    border: none;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative; /* Necessário para posicionar o tooltip */
+}
+
+/* Tooltip para mostrar o título (musculo) ao passar o mouse */
+#selecione-musculo ul li div button::after {
+    content: attr(title);
+    visibility: hidden;
+    opacity: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+    white-space: nowrap; /* Evita quebra de linha no tooltip */
+}
+
+#selecione-musculo ul li div button:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+.costas {
+    background-image: url(./imagens/Reverse-Grip-Pulldown_10c5341f-30fd-4126-8fd7-2fa05c079889_600x600.webp);
+    background-size: cover;
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;   
+}
+.braço {
+    background-image: url(./imagens/braço.jpg);
+    background-size: cover;
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+}
+.peito{
+    background-image: url(./imagens/peito.jpg);
+    background-size: cover;
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+}
+.pernas{
+    background-image: url(./imagens/pernas.jpeg);
+    background-size: cover;
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;  /*faz a imagem nao repetir*/
+}
+.ombro{
+    background-image: url(./imagens/ombros.jpeg);
+    background-size: cover;
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+}
+
+/* Estilos para os botões de seleção de equipamento */
+#selecione-equipamento ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre os itens */
+    align-items: center;
+    padding: 0;
+    margin: 20px auto; /* Espaçamento similar ao dos músculos */
+    max-width: 80%; /* Para limitar o tamanho e centralizar */
+    border-bottom: 2px solid #e0e0e0; /* Linha branca de separação */
+    padding-bottom: 20px; /* Para distanciar os botões da linha */
+}
+
+#selecione-equipamento li {
+    display: inline-block;
+    position: relative;
+}
+
+#selecione-equipamento button {
+    background-color: #6a0dad;
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    margin: 0 10px; /* Ajustar espaçamento lateral entre botões */
+    transition: transform 0.3s ease;
+}
+
+#selecione-equipamento button:hover {
+    background-color: #4b0082;
+    transform: scale(1.05);
+}
+
+/* Tooltip para mostrar o nome do equipamento */
+#selecione-equipamento button::after {
+    content: attr(title);
+    visibility: hidden;
+    opacity: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+}
+
+#selecione-equipamento button:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Estilo adicional para melhorar a aparência dos botões */
+.halter button {
+    background-image: url('./imagens/halter.jpeg');
+    background-size: cover;
+}
+
+.banco button {
+    background-image: url('./imagens/banco.jpeg');
+    background-size: cover;
+}
+
+.barra button {
+    background-image: url('./imagens/barra.jpeg');
+    background-size: cover;
+}
+
+.anilha button {
+    background-image: url('./imagens/anilhas.jpeg');
+    background-size: cover;
+}
+
+.polia button {
+    background-image: url('./imagens/polia.jpeg');
+    background-size: cover;
+}
+/* Container principal da seção "Concluir" */
+.Concluir {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza verticalmente, caso o container tenha mais altura */
+    margin: 30; /* margem para que o botao nao grude no questionario a cima*/
+}   
+
+/* Estilos para o botão "Concluir" */
+.botao-concluir {
+    background-color: #6a0dad;
+    color: #fff;
+    font-weight: 500;
+    border: 2px solid #4b0082;
+    font-size: 1rem; /*1rem é = 16px*/
+    cursor: pointer;
+    padding: 15px 30px;
+    text-align: center; /*centraliza o texto do bota0*/
+    border-radius: 30px; /*deixa o botao redondo*/
+}
+.botao-concluir a {
+    color: #fff; /* Faz o texto do botao ficar branco pq esse caralho nao estava ficando branco se nao colocar a tag a */
+}
+
+.botao-concluir:hover {
+    background-color: transparent; /*faz o hover ficar transparente pq eu acho q fica foda assim*/
+    border-color: #6a0dad;
+}
+
+
