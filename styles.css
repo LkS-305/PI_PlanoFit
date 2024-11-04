@@ -1,0 +1,450 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #333230;
+  color: #BFBFBF;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(to bottom, #000000, #32312D); /* Gradiente do preto para o cinza escuro */
+  padding: 20px;
+  text-align: center;
+  color: #D6BD1C;
+}
+
+header h1 span {
+  color: #AF9800;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+nav button {
+  background-color: #404040;
+  color: #000000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav button:hover {
+  background-color: #AF9800;
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+/* Sobre Nós Section */
+.about-section {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  gap: 20px; /* Espaço entre imagem e texto */
+}
+
+.about-image {
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-text {
+  max-width: 600px;
+  color: #D6BD1C;
+  background-color: #32312D;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.about-text:hover {
+  transform: scale(1.05);
+}
+
+.about-text h2 {
+  color: #000000;
+  font-size: 1.5em;
+  font-weight: bold;
+  
+}
+
+.plans-section .basic-plan, .plans-section .premium-plan {
+  transition: transform 0.3s;
+}
+
+.plans-section .basic-plan:hover, .plans-section .premium-plan:hover {
+  transform: scale(1.05);
+}
+
+
+/* Planos Section */
+.plans-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.plans-section h2 {
+  color: #D6BD1C;
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.basic-plan, .premium-plan {
+  background-color: #32312D;
+  padding: 20px;
+  border-radius: 8px;
+  width: 45%;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s;
+}
+
+/* Efeito de zoom ao passar o mouse nos quadrados dos planos */
+.basic-plan:hover, .premium-plan:hover {
+  transform: scale(1.05);
+}
+
+.basic-plan h3 {
+  color: #D6BD1C;
+  margin-bottom: 10px;
+}
+
+.premium-plan {
+  background-color: #AF9800;
+}
+
+.premium-plan h3 {
+  color: #000000;
+}
+
+.basic-plan ul, .premium-plan ul {
+  list-style: none;
+  padding: 0;
+}
+
+.basic-plan li, .premium-plan li {
+  color: #BFBFBF;
+  margin: 5px 0;
+}
+
+footer {
+  background-color: #333230;
+  text-align: center;
+  padding: 10px;
+  color: #D6BD1C;
+}
+
+footer span {
+  color: #AF9800;
+}
+
+  
+.descricao{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #32312D;
+}
+.descricao p{
+  font-size: 1.3rem;
+  color: #BFBFBF;
+}
+
+,.descricao-lista{
+  height: 70%;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  row-gap: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo Geral */
+body {
+    background-color: #333230;
+    color: #BFBFBF;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #32312D;
+    padding: 20px;
+    text-align: center;
+    color: #D6BD1C;
+  }
+  
+  header h1 {
+    font-size: 2em;
+    margin: 0;
+  }
+  
+  header p {
+    color: #AF9800;
+  }
+  
+  /* Container Principal */
+  .help-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  /* Seção de Informações de Contato */
+  .contact-info {
+    background-color: #404040;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contact-info h2 {
+    color: #D6BD1C;
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+  
+  .contact-info p {
+    margin: 8px 0;
+  }
+  
+  /* Formulário de Contato */
+ /* Estilo para o título da seção */
+section h2 {
+  color: #D6BD1C; /* Cor do título */
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilo para o formulário */
+section form {
+  max-width: 500px; /* Largura máxima */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #333230; /* Cor de fundo do formulário */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para os rótulos (labels) */
+section form label {
+  color: #BFBFBF; /* Cor do texto do label */
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* Estilo para os campos de entrada (input) e área de texto (textarea) */
+section form input[type="text"],
+section form input[type="email"],
+section form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #AF9800;
+  border-radius: 5px;
+  background-color: #32312D; /* Cor de fundo dos inputs */
+  color: #BFBFBF;
+}
+
+section form input[type="text"]::placeholder,
+section form input[type="email"]::placeholder,
+section form textarea::placeholder {
+  color: #BFBFBF; /* Cor do placeholder */
+}
+
+/* Estilo para o botão */
+section form button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #AF9800; /* Cor de fundo do botão */
+  color: #333230; /* Cor do texto do botão */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+/* Efeito de hover no botão */
+section form button:hover {
+  background-color: #D6BD1C; /* Cor do botão ao passar o mouse */
+}
+
+/* Adicionando um foco nos inputs */
+section form input[type="text"]:focus,
+section form input[type="email"]:focus,
+section form textarea:focus {
+  outline: none;
+  border-color: #D6BD1C; /* Cor da borda ao focar */
+  box-shadow: 0 0 5px rgba(214, 189, 28, 0.5);
+}
+
+
+  
