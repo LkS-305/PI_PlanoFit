@@ -1,21 +1,35 @@
-/* styles.css */
+/* Paleta de Cores */
+:root {
+  --main-bg-color: #ffffff;
+  --header-bg-gradient: linear-gradient(to bottom, #e0e0e0, #ffffff);
+  --text-color: #4f4f4f;
+  --highlight-color: #D6BD1C; /* Amarelo */
+  --button-bg-color: #333333; /* Preto suave */
+  --button-hover-bg-color: #D6BD1C; /* Amarelo */
+  --card-bg-color: #f2f2f2; /* Cinza claro */
+  --card-hover-shadow: rgba(0, 0, 0, 0.2);
+  --nav-button-color: #f9f9f9; /* Branco quebrado */
+}
+
+/* Estilo Global */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #333230;
-  color: #BFBFBF;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
   margin: 0;
   padding: 0;
 }
 
 header {
-  background: linear-gradient(to bottom, #000000, #32312D); /* Gradiente do preto para o cinza escuro */
+  background: var(--header-bg-gradient);
   padding: 20px;
   text-align: center;
-  color: #D6BD1C;
+  color: var(--highlight-color);
+  border-bottom: 1px solid #dcdcdc;
 }
 
 header h1 span {
-  color: #AF9800;
+  color: var(--highlight-color);
 }
 
 nav {
@@ -27,108 +41,105 @@ nav {
 }
 
 nav button {
-  background-color: #404040;
-  color: #000000;
+  background-color: var(--button-bg-color);
+  color: var(--nav-button-color);
   border: none;
   padding: 12px 25px;
   border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
   font-weight: bold;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav button:hover {
-  background-color: #AF9800;
-  color: #FFFFFF;
+  background-color: var(--button-hover-bg-color);
+  color: #ffffff;
   transform: scale(1.05);
+  box-shadow: 0px 6px 12px var(--card-hover-shadow);
 }
 
-/* Sobre Nós Section */
+/* Seção Sobre Nós */
 .about-section {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   padding: 20px;
-  gap: 20px; /* Espaço entre imagem e texto */
+  gap: 20px;
 }
 
 .about-image {
-  width: 500px;
-  height: auto;
-  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
+  flex: 1;
   max-width: 600px;
-  color: #D6BD1C;
-  background-color: #32312D;
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   transition: transform 0.3s;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-text:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .about-text h2 {
-  color: #000000;
+  color: var(--highlight-color);
   font-size: 1.5em;
   font-weight: bold;
-  
 }
 
-.plans-section .basic-plan, .plans-section .premium-plan {
-  transition: transform 0.3s;
-}
-
-.plans-section .basic-plan:hover, .plans-section .premium-plan:hover {
-  transform: scale(1.05);
-}
-
-
-/* Planos Section */
+/* Seção de Planos */
 .plans-section {
   padding: 20px;
   text-align: center;
+  background-color: var(--main-bg-color);
 }
 
 .plans-section h2 {
-  color: #D6BD1C;
+  color: var(--highlight-color);
 }
 
 .plans {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
 .basic-plan, .premium-plan {
-  background-color: #32312D;
+  background-color: var(--card-bg-color);
   padding: 20px;
-  border-radius: 8px;
-  width: 45%;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 45%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Efeito de zoom ao passar o mouse nos quadrados dos planos */
 .basic-plan:hover, .premium-plan:hover {
   transform: scale(1.05);
+  box-shadow: 0px 6px 12px var(--card-hover-shadow);
 }
 
-.basic-plan h3 {
-  color: #D6BD1C;
+.basic-plan h3, .premium-plan h3 {
+  color: var(--highlight-color);
   margin-bottom: 10px;
 }
 
 .premium-plan {
-  background-color: #AF9800;
+  background-color: var(--highlight-color);
 }
 
 .premium-plan h3 {
-  color: #000000;
+  color: #333333;
 }
 
 .basic-plan ul, .premium-plan ul {
@@ -137,22 +148,38 @@ nav button:hover {
 }
 
 .basic-plan li, .premium-plan li {
-  color: #BFBFBF;
+  color: var(--text-color);
   margin: 5px 0;
 }
 
+/* Rodapé */
 footer {
-  background-color: #333230;
+  background-color: var(--main-bg-color);
   text-align: center;
   padding: 10px;
-  color: #D6BD1C;
+  color: var(--highlight-color);
+  border-top: 1px solid #dcdcdc;
 }
 
 footer span {
-  color: #AF9800;
+  color: var(--highlight-color);
 }
 
+
+
   
+
+
+
+
+
+
+
+
+
+
+
+
 .descricao{
   width: 100%;
   height: 50vh;
@@ -321,128 +348,127 @@ footer span {
 
 /* Estilo Geral */
 body {
-    background-color: #333230;
-    color: #BFBFBF;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #32312D;
-    padding: 20px;
-    text-align: center;
-    color: #D6BD1C;
-  }
-  
-  header h1 {
-    font-size: 2em;
-    margin: 0;
-  }
-  
-  header p {
-    color: #AF9800;
-  }
-  
-  /* Container Principal */
-  .help-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-  }
-  
-  /* Seção de Informações de Contato */
-  .contact-info {
-    background-color: #404040;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  .contact-info h2 {
-    color: #D6BD1C;
-    font-size: 1.5em;
-    margin-top: 0;
-  }
-  
-  .contact-info p {
-    margin: 8px 0;
-  }
-  
-  /* Formulário de Contato */
- /* Estilo para o título da seção */
+  background-color: #ffffff;
+  color: #404040;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #32312D;
+  padding: 20px;
+  text-align: center;
+  color: #D6BD1C;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  color: #AF9800;
+  font-style: italic;
+}
+
+/* Container Principal */
+.help-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* Seção de Informações de Contato */
+.contact-info {
+  background-color: #d8d6d6;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h2 {
+  color: #AF9800;
+  font-size: 1.8em;
+  margin-top: 0;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+/* Formulário de Contato */
 section h2 {
-  color: #D6BD1C; /* Cor do título */
+  color: #AF9800;
   font-size: 2em;
   margin-bottom: 20px;
   text-align: center;
 }
 
-/* Estilo para o formulário */
 section form {
-  max-width: 500px; /* Largura máxima */
+  max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #333230; /* Cor de fundo do formulário */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para os rótulos (labels) */
+/* Rótulos */
 section form label {
-  color: #BFBFBF; /* Cor do texto do label */
+  color: #404040;
   font-weight: bold;
   display: block;
-  margin-top: 15px;
   margin-bottom: 5px;
 }
 
-/* Estilo para os campos de entrada (input) e área de texto (textarea) */
+/* Campos de entrada e área de texto */
 section form input[type="text"],
 section form input[type="email"],
 section form textarea {
   width: 100%;
   padding: 10px;
-  font-size: 1em;
+  margin-bottom: 15px;
   border: 1px solid #AF9800;
   border-radius: 5px;
-  background-color: #32312D; /* Cor de fundo dos inputs */
+  background-color: #f5f5f5;
+  color: #404040;
+}
+
+section form input::placeholder,
+section form textarea::placeholder {
   color: #BFBFBF;
 }
 
-section form input[type="text"]::placeholder,
-section form input[type="email"]::placeholder,
-section form textarea::placeholder {
-  color: #BFBFBF; /* Cor do placeholder */
-}
-
-/* Estilo para o botão */
+/* Botão */
 section form button {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   font-size: 1.1em;
   font-weight: bold;
-  background-color: #AF9800; /* Cor de fundo do botão */
-  color: #333230; /* Cor do texto do botão */
+  background-color: #AF9800;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 15px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Efeito de hover no botão */
+/* Hover no botão */
 section form button:hover {
-  background-color: #D6BD1C; /* Cor do botão ao passar o mouse */
+  background-color: #D6BD1C;
+  transform: scale(1.05);
 }
 
-/* Adicionando um foco nos inputs */
-section form input[type="text"]:focus,
-section form input[type="email"]:focus,
+/* Foco nos campos de entrada */
+section form input:focus,
 section form textarea:focus {
   outline: none;
-  border-color: #D6BD1C; /* Cor da borda ao focar */
+  border-color: #D6BD1C;
   box-shadow: 0 0 5px rgba(214, 189, 28, 0.5);
 }
 
