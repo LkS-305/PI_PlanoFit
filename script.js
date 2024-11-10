@@ -1,5 +1,5 @@
 // Array que contém os nomes das imagens do carrossel
-const images = ["img1.jpg", "img2.jpg", "img3.jpg"];
+const images = ["imagens/img1.jpg", "imagens/img2.jpg", "imagens/img3.jpg"];
 let currentIndex = 0; // Índice da imagem atual
 
 // Função para exibir a imagem no carrossel
