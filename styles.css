@@ -540,3 +540,162 @@ section form textarea:focus {
   border-color: #D6BD1C;
   box-shadow: 0 0 5px rgba(214, 189, 28, 0.5);
 }
+
+.descricao {
+  width: 100%;
+  background-color: #32312D;
+  color: #BFBFBF;
+  padding: 30px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.descricao p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.descricao ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.descricao li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.descricao li:hover {
+  color: var(--highlight-color);
+}
+
+#icones-descricao {
+  font-size: 1.5rem;
+  color: var(--highlight-color);
+}
+
+/* ================== Barra de Pesquisa ================== */
+.barra-pesquisa {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.barra-pesquisa input {
+  width: 500px;
+  padding: 10px 15px;
+  border: 1px solid var(--highlight-color);
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+  background-color: #f5f5f5;
+  color: var(--text-color);
+  transition: border-color 0.3s;
+}
+
+.barra-pesquisa input:focus {
+  border-color: var(--button-hover-bg-color);
+}
+
+/* ================== Seção de Filtros ================== */
+.exercicios, .equipamentos {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filter-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--card-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter-item {
+  text-align: center;
+  padding: 10px;
+  border: 2px solid var(--highlight-color);
+  border-radius: 5px;
+  background-color: var(--highlight-color);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.filter-item:hover {
+  background-color: var(--button-bg-color);
+  transform: translateY(-5px);
+}
+
+/* ================== Lista de Exercícios ================== */
+.exercise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.exercise-item {
+  background-color: var(--card-bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+}
+
+.exercise-item:hover {
+  box-shadow: 0 6px 12px var(--card-hover-shadow);
+}
+
+.exercise-item h3 {
+  color: var(--highlight-color);
+  margin-bottom: 10px;
+}
+
+.exercise-item p {
+  margin: 5px 0;
+}
+
+.exercise-item a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: var(--highlight-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.exercise-item a:hover {
+  background-color: var(--button-bg-color);
+}
+
+/* ================== Carrinho de Exercícios ================== */
+.cart {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #32312D;
+  color: #fff;
+  border: 2px solid var(--highlight-color);
+}
+
+.cart h2 {
+  margin-top: 0;
+  color: var(--highlight-color);
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
