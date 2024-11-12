@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/06ad468496.js" crossorigin="anonymous"></script>
+    <header>
+        <div class="header-content">
+          <h1><span>Plano</span>Fit</h1>
+          <p>Seu corpo, sua meta, nosso plano!</p>
+        </div>
+        <nav>
+            <button>Início</button>
+            <a href="exercicios.html">
+              <button>Montar Treino</button>
+            </a>
+            <a href="#"><button>Montar Dieta</button></a>
+            <a href="ajuda.html"><button>Ajuda</button></a>
+          </nav>
+      </header>
+
+    <div class="descricao">
+        <p>Bem-vindo ao PlanoFit! Aqui você pode:</p>
+        <ul >
+                <li>
+                    <i class="fa-solid fa-magnifying-glass" id="icones-descricao"></i>
+                    <h4>Pesquisar exercícios pelo nome usando a barra de pesquisa.</h4>
+                </li>
+
+                
+                <li>
+                    <i class="fa-solid fa-person-walking" id="icones-descricao"></i>
+                    <h4>Pesquisar exercícios pelo nome usando a barra de pesquisa</h4>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-dumbbell" id="icones-descricao"></i>
+                    <h4>Filtrar exercícios por tipo de equipamento disponível.</h4>
+                </li>
+
+                <li>
+                    <i class="fa-regular fa-cart-shopping" id="icones-descricao"></i>
+                    <h4>Adicionar exercícios ao seu carrinho.</h4>
+                </li>
+
+        </ul>
+            <p>Explore e encontre os melhores exercícios para o seu treino!</p>
+    </div>
+    <div class="barra-pesquisa">
+        <input type="text" id="search-input" class="search-input" placeholder="Pesquisar exercício..." onkeyup="filterExercises()">
+    </div>
+    
+    <div class="exercicios">
+        <h2>Filtrar por Grupo Muscular</h2>
+        <div class="filter-container" id="muscle-group-filters"></div>
+    </div>
+
+    <div class="equipamentos">
+        <h2>Filtrar por Equipamento</h2>
+        <div class="filter-container" id="equipment-filters"></div>
+    </div>
+
+    <div class="exercicios-disponiveis">
+        <h2>Exercícios Disponíveis</h2>
+        <div class="exercise-list" id="exercise-list"></div>
+    </div>
+
+    <div class="cart">
+        <h2>Carrinho de Exercícios</h2>
+        <ul class="cart-list" id="cart-list"></ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PlanoFit. Todos os direitos reservados.</p>
+        <p><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
+    </footer>
+
+    <script src="script.js" ></script>
+</body>
+</html>
