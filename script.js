@@ -144,10 +144,10 @@ function addToCart(nomeExercicio) {
  }
 
  function clearCart() {
-  cart = []; // Limpa o array do carrinho
   const cartList = document.getElementById("cart-list");
-  cartList.innerHTML = ""; // Limpa o DOM
-  alert("A lista de exercícios foi limpa!");
+  cartList.innerHTML = ""; // Remove todos os itens do carrinho
+  cart = []; // Esvazia o array do carrinho
+  alert("O carrinho foi limpo!");
 }
 
 // Exibe exercícios na lista
@@ -194,6 +194,11 @@ function filterByMuscleGroup(grupo) {
   // Ativa ou desativa o filtro de grupo muscular
   activeMuscleGroup = activeMuscleGroup === grupo ? null : grupo;
   filterExercises();
+
+    // Faz a tela rolar para a seção de equipamentos
+  const equipmentSection = document.querySelector(".equipamentos");
+  equipmentSection.scrollIntoView({ behavior: "smooth" });
+
 }
 
 // Atualiza o filtro para equipamento
@@ -201,6 +206,10 @@ function filterByEquipment(equipamento) {
   // Ativa ou desativa o filtro de equipamento
   activeEquipment = activeEquipment === equipamento ? null : equipamento;
   filterExercises();
+
+  const exercisesSection = document.querySelector(".exercicios-disponiveis");
+  exercisesSection.scrollIntoView({ behavior: "smooth" });
+
 }
 
 // Popula os filtros de grupo muscular

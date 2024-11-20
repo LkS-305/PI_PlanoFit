@@ -842,38 +842,44 @@ section form textarea:focus {
   }
   
   
-  .cart {
-    margin-top: 30px;
-    padding: 20px;
-    border: 3px solid #AF9800;
-    border-radius: 5px;
-    background-color: var(--carousel-height);
-  }
-  
-  .cart h2 {
-    margin-top: 0;
-    color: #D6BD1C;
-  }
-  
-  .cart-list {
-    margin-top: 10px;
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .cart #clear-cart {
-  background-color: #D6BD1C;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 10px;
-  transition: background-color 0.3s, transform 0.2s;
+  /* Botão de Limpar Lista */
+/* Botão de Limpar Lista no Carrinho */
+.cart .clear-cart-btn {
+  background-color: #D6BD1C; /* Cor de fundo amarelo */
+  color: #fff; /* Cor do texto branco */
+  border: none; /* Remove a borda padrão */
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Aponta como botão clicável */
+  font-weight: bold; /* Negrito */
+  font-size: 1rem; /* Tamanho da fonte */
+  margin-top: 20px; /* Espaço acima do botão */
+  display: block; /* Garante que o botão ocupe uma linha inteira */
+  width: 100%; /* Ocupa toda a largura do carrinho */
+  text-align: center; /* Centraliza o texto */
+  transition: background-color 0.3s; /* Transição apenas para a cor */
 }
 
-.cart #clear-cart:hover {
-  background-color: #AF9800;
-  transform: scale(1.05);
+.cart .clear-cart-btn:hover {
+  background-color: #AF9800; /* Cor de fundo ao passar o mouse */
+}
+
+
+.cart {
+  margin-top: 30px;
+  padding: 20px;
+  border: 3px solid #AF9800;
+  border-radius: 5px;
+  background-color: var(--carousel-height);
+}
+
+.cart h2 {
+  margin-top: 0;
+  color: #D6BD1C;
+}
+
+.cart-list {
+  margin-top: 10px;
+  list-style-type: none;
+  padding: 0;
 }
