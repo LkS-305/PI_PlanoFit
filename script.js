@@ -292,3 +292,47 @@ window.onload = () => {
   displayExercises(exercicios); // Mostra todos os exercícios inicialmente
 };
 
+function gerarDieta() {
+  const objetivo = document.getElementById("objetivo").value;
+  const dietaLista = document.getElementById("dieta-lista");
+  const dietaGerada = document.getElementById("dieta-gerada");
+
+  // Limpa a lista anterior
+  dietaLista.innerHTML = "";
+
+  // Define as dietas para cada objetivo
+  const dietas = {
+    "perder-peso": [
+      "Café da manhã: 1 ovo cozido + 1 fatia de pão integral",
+      "Almoço: Salada de frango grelhado + legumes",
+      "Jantar: Sopa de legumes"
+    ],
+    "melhorar-saude": [
+      "Café da manhã: Frutas frescas + aveia",
+      "Almoço: Peixe grelhado + arroz integral + salada",
+      "Jantar: Omelete de legumes"
+    ],
+    "definir": [
+      "Café da manhã: 4 claras de ovo + batata-doce",
+      "Almoço: Frango grelhado + quinoa + brócolis",
+      "Jantar: Filé de peixe + salada"
+    ]
+  };
+
+  // Validação simples
+  if (!dietas[objetivo]) {
+    alert("Selecione um objetivo válido.");
+    return;
+  }
+
+  // Preenche a lista com base no objetivo
+  dietas[objetivo].forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    dietaLista.appendChild(li);
+  });
+
+  // Mostra a seção de dieta
+  dietaGerada.style.display = "block";
+
+}
