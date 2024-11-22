@@ -42,63 +42,44 @@
             <label for="idade">Digite sua Idade</label>
             <input type="number" id="idade" placeholder="anos">
         </div>
-        <div class="dieta_forms_input">
-            
-            <label for="altura">Digite sua Altura</label>
-            <input type="number" id="altura" placeholder="cm">
-        </div>
-        <div class="dieta_forms_input">
-           
-            <label for="peso">Digite seu Peso</label>
-            <input type="number" id="peso" placeholder="kg">
-        </div>
-    </div>
-    <div class="selecione_forms">
-        <div class="dieta_forms_input">
-            <label for="sexo">Qual seu sexo</label>
-            <select id="sexo">
-                <option value="selecione">Selecione</option>
-                <option value="Homem">Homem</option>
-                <option value="Mulher">Mulher</option>
-                <option value="Outro">Outro</option>
-            </select>
-        </div>
-        <div class="dieta_forms_input">
-            <label for="objetivo">Qual seu objetivo</label>
-            <select id="objetivo">
-                <option value="selecione">Selecione</option>
-                <option value="perder-peso">Perder Peso</option>
-                <option value="melhorar-saude">Melhorar Saúde</option>
-                <option value="definir">Definição</option>
-            </select>
-        </div>
-        <div class="dieta_forms_input">
-            <label for="atividade">Atividade Física</label>
-            <select id="atividade">
-                <option value="selecione">Selecione</option>
-                <option value="sedentario">Sedentário</option>
-                <option value="moderado">Moderado</option>
-                <option value="ativo">Muito Ativo</option>
-            </select>
-        </div>
-    </div>
-    <div class="botao_continua">
-        <a href="#" onclick="gerarDieta()">Continuar</a>
-    </div>
-  </div>   
-
-  <!-- Seção para exibir a lista gerada -->
-  <div id="dieta-gerada" class="dieta-gerada">
-    <h2>Sua Dieta</h2>
-    <ul id="dieta-lista"></ul>
-  </div>
-
-  <footer class="credits-footer">
-    <p>© 2024 PlanoFit - Todos os direitos reservados</p>
-    <p>Desenvolvido por [Equipe do Lucão]</p>
-    <p>Contate-nos em: contato@planofit.com</p>
-  </footer>
-
-  <script src="script.js"></script>
+        <div class="selecione_forms">
+                <div class="dieta_forms_input">
+                    <label for="sexualididade">Selecione seu genero</label>
+                    <select>
+                        <option value="selecione">selecione</option>
+                        <option value="Homem">Masculino</option>
+                        <option value="Mulher">Feminino</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <div class="dieta_forms_input">
+                    <label for="objetivo">Qual seu objetivo</label>
+                    <select>
+                        <option value="selecione">selecione</option>
+                        <option value="perder-peso">Perder Peso</option>
+                        <option value="melhorar-saude">Melhorar sua saude </option>
+                        <option value="definir">Definição</option>
+                        <option value="aliviar">aliviar o estresse</option>
+                    </select>
+                </div>
+                <div class="dieta_forms_input">
+                    <label for="atividade">Atividade fisica</label>
+                    <select>
+                        <option value="selecione">selecione</option>
+                        <option value="sedentario">sedentario</option>
+                        <option value="ligeiramente">ligeiraente ativo</option>
+                        <option value="moderado">moderado</option>
+                        <option value="ativo">muito ativo</option>
+                    </select>
+                </div>
+            </div>
+            <div class="botao_continua">
+                <a href="#">Continuar</a>
+            </div>
+    </div>   
+    <footer>
+        <p>&copy; 2024 PlanoFit. Todos os direitos reservados.</p>
+        <p><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
+    </footer>
 </body>
 </html>
