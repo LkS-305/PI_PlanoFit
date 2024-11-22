@@ -10,9 +10,13 @@
     <script src="https://kit.fontawesome.com/06ad468496.js" crossorigin="anonymous"></script>
     <header>
         <div class="header-content">
-          <h1><span>Plano</span>Fit</h1>
-          <p>Seu corpo, sua meta, nosso plano!</p>
+          <h1 class="logo">
+            <span class="logo-icon">💪</span> <!-- Ícone do logotipo -->
+            <span class="logo-text">Plano<span>Fit</span></span> <!-- Texto do logotipo -->
+          </h1>
+          <p class="tagline">Seu corpo, sua meta, nosso plano!</p> <!-- Slogan do site -->
         </div>
+    
         <!-- Navegação principal -->
         <nav>
           <a href="index.html"><button>Início</button></a>
@@ -21,7 +25,6 @@
           <a href="ajuda.html"><button>Ajuda</button></a>
         </nav>
       </header>
-
     <div class="descricao">
         <p>Bem-vindo ao PlanoFit! Aqui você pode:</p>
         <ul >
@@ -66,17 +69,21 @@
     <div class="exercicios-disponiveis">
         <h2>Exercícios Disponíveis</h2>
         <div class="exercise-list" id="exercise-list"></div>
+        </div>
     </div>
-
+    
     <div class="cart">
         <h2>Carrinho de Exercícios</h2>
         <ul class="cart-list" id="cart-list"></ul>
+        <button id="clear-cart" class="clear-cart-btn" onclick="clearCart()">Limpar Lista</button>
     </div>
+    
 
-    <footer>
-        <p>&copy; 2024 PlanoFit. Todos os direitos reservados.</p>
-        <p><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
-    </footer>
+    <footer class="credits-footer">
+        <p>© 2024 PlanoFit - Todos os direitos reservados</p>
+        <p>Desenvolvido por [Equipe do Lucão]</p>
+        <p>Contate-nos em: contato@planofit.com</p>
+      </footer>
 
     <script src="script.js" ></script>
 </body>

@@ -5,100 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dieta</title>
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/06ad468496.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <script src="https://kit.fontawesome.com/06ad468496.js" crossorigin="anonymous"></script>
-    <header>
-        <div class="header-content">
-          <h1><span>Plano</span>Fit</h1>
-          <p>Seu corpo, sua meta, nosso plano!</p>
-        </div>
-        <nav>
-            <button>Início</button>
-            <a href="exercicios.html">
-              <button>Montar Treino</button>
-            </a>
-            <a href="./dieta.html"><button>Montar Dieta</button></a>
-            <a href="ajuda.html"><button>Ajuda</button></a>
-          </nav>
-    </header>
-
-    <div class="banner-dieta">
-        <h2>MONTE SUA PROPRIA DIETA PERSONALIZADA!</h2>
-        <P>veja aqui como montar uma dieta adequada para seu corpo</P>
-        <ul>
-            <li>
-                <i class="fa-solid fa-carrot"></i>
-                <h4>quais os melhores alimentos para sua dieta</h4>
-            </li>
-            <li>
-                <i class="fa-solid fa-bullseye"></i>
-                <h4>como montar uma dieta com base nos seus objetivos</h4>
-            </li>
-            <li>
-                <i class="fa-solid fa-check"></i>
-                <h4>aprenda a contar sua calorias diarias</h4>
-            </li>
-        </ul>
-        <h3>COM A PLANOFIT O BUCHO SAI!!!</h3>
+  <header>
+    <div class="header-content">
+      <h1 class="logo">
+        <span class="logo-icon">💪</span>
+        <span class="logo-text">Plano<span>Fit</span></span>
+      </h1>
+      <p class="tagline">Seu corpo, sua meta, nosso plano!</p>
     </div>
+    <nav>
+      <a href="index.html"><button>Início</button></a>
+      <a href="exercicios.html"><button>Montar Treino</button></a>
+      <a href="dieta.html"><button>Montar Dieta</button></a>
+      <a href="ajuda.html"><button>Ajuda</button></a>
+    </nav>
+  </header>
+
+  <div class="banner-dieta">
+    <h2>MONTE SUA PRÓPRIA DIETA PERSONALIZADA!</h2>
+    <p>Veja aqui como montar uma dieta adequada para seu corpo</p>
+    <ul>
+        <li><i class="fa-solid fa-carrot"></i><h4>Quais os melhores alimentos para sua dieta</h4></li>
+        <li><i class="fa-solid fa-bullseye"></i><h4>Como montar uma dieta com base nos seus objetivos</h4></li>
+        <li><i class="fa-solid fa-check"></i><h4>Aprenda a contar suas calorias diárias</h4></li>
+    </ul>
+    <h3>COM A PLANOFIT O BUCHO SAI!!!</h3>
+  </div>
     
-    <div class="dieta_forms">
-        <div class="digite-forms">            
-                <div class="dieta_forms_input">
-                        <i class="fa-regular fa-circle-user" id="dieta_forms_icon"></i>
-                        <label for="idade" id="label">Digite sua Idade</label>
-                        <input type="number" placeholder="anos" >
-                </div>
-                <div class="dieta_forms_input">
-                        <i class="fa-solid fa-person" id="dieta_forms_icon"></i>
-                        <label for="altura">Digite sua aultura</label>
-                        <input type="number" placeholder="cm" >
-                </div>
-                <div class="dieta_forms_input">
-                        <i class="fa-solid fa-scale-balanced" id="dieta_forms_icon"></i>
-                        <label for="peso">Digite seu peso</label>
-                        <input type="number" placeholder="kg" >
-                </div>
+  <div class="dieta_forms">
+    <div class="digite-forms">
+        <div class="dieta_forms_input">
+           
+            <label for="idade">Digite sua Idade</label>
+            <input type="number" id="idade" placeholder="anos">
         </div>
-        <div class="selecione_forms">
-                <div class="dieta_forms_input">
-                    <label for="sexualididade">Qual seu sexo</label>
-                    <select>
-                        <option value="selecione">selecione</option>
-                        <option value="Homem">Homem</option>
-                        <option value="Mulher">Mulher</option>
-                        <option value="Outro">Outro</option>
-                    </select>
-                </div>
-                <div class="dieta_forms_input">
-                    <label for="objetivo">Qual seu objetivo</label>
-                    <select>
-                        <option value="selecione">selecione</option>
-                        <option value="perder-peso">Perder Peso</option>
-                        <option value="melhorar-saude">Melhorar sua saude </option>
-                        <option value="definir">Definição</option>
-                        <option value="aliviar">aliviar o estresse</option>
-                    </select>
-                </div>
-                <div class="dieta_forms_input">
-                    <label for="atividade">Atividade fisica</label>
-                    <select>
-                        <option value="selecione">selecione</option>
-                        <option value="sedentario">sedentario</option>
-                        <option value="ligeiramente">ligeiraente ativo</option>
-                        <option value="moderado">moderado</option>
-                        <option value="ativo">muito ativo</option>
-                    </select>
-                </div>
-            </div>
-            <div class="botao_continua">
-                <a href="#">Continuar</a>
-            </div>
-    </div>   
-    <footer>
-        <p>&copy; 2024 PlanoFit. Todos os direitos reservados.</p>
-        <p><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
-    </footer>
+        <div class="dieta_forms_input">
+            
+            <label for="altura">Digite sua Altura</label>
+            <input type="number" id="altura" placeholder="cm">
+        </div>
+        <div class="dieta_forms_input">
+           
+            <label for="peso">Digite seu Peso</label>
+            <input type="number" id="peso" placeholder="kg">
+        </div>
+    </div>
+    <div class="selecione_forms">
+        <div class="dieta_forms_input">
+            <label for="sexo">Qual seu sexo</label>
+            <select id="sexo">
+                <option value="selecione">Selecione</option>
+                <option value="Homem">Homem</option>
+                <option value="Mulher">Mulher</option>
+                <option value="Outro">Outro</option>
+            </select>
+        </div>
+        <div class="dieta_forms_input">
+            <label for="objetivo">Qual seu objetivo</label>
+            <select id="objetivo">
+                <option value="selecione">Selecione</option>
+                <option value="perder-peso">Perder Peso</option>
+                <option value="melhorar-saude">Melhorar Saúde</option>
+                <option value="definir">Definição</option>
+            </select>
+        </div>
+        <div class="dieta_forms_input">
+            <label for="atividade">Atividade Física</label>
+            <select id="atividade">
+                <option value="selecione">Selecione</option>
+                <option value="sedentario">Sedentário</option>
+                <option value="moderado">Moderado</option>
+                <option value="ativo">Muito Ativo</option>
+            </select>
+        </div>
+    </div>
+    <div class="botao_continua">
+        <a href="#" onclick="gerarDieta()">Continuar</a>
+    </div>
+  </div>   
+
+  <!-- Seção para exibir a lista gerada -->
+  <div id="dieta-gerada" class="dieta-gerada">
+    <h2>Sua Dieta</h2>
+    <ul id="dieta-lista"></ul>
+  </div>
+
+  <footer class="credits-footer">
+    <p>© 2024 PlanoFit - Todos os direitos reservados</p>
+    <p>Desenvolvido por [Equipe do Lucão]</p>
+    <p>Contate-nos em: contato@planofit.com</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
