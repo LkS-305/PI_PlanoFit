@@ -25,10 +25,6 @@ function nextImage() {
 // Define o intervalo para alternar automaticamente as imagens a cada 3 segundos
 setInterval(nextImage, 3000); // 3000 ms = 3 segundos
 
-
-
-
-
 const gruposMusculares = [
   "Peitoral", 
   "Bíceps", 
@@ -116,50 +112,56 @@ const exercicios = [
   { nome: "Mergulho", grupoMuscular: "Tríceps", equipamento: "Banco", descricao: "Exercício para tríceps", linkVideo: "https://exemplo.com/mergulho" }
 ];
 
-// Popula os filtros de grupo muscular
-function populateMuscleGroupFilters() {
-const filterContainer = document.getElementById("muscle-group-filters");
-gruposMusculares.forEach(grupo => {
-  const div = document.createElement("div");
-  div.className = "filter-item";
-  div.innerText = grupo;
-  div.onclick = () => filterByMuscleGroup(grupo);
-  filterContainer.appendChild(div);
-});
-}
+// Variáveis para armazenar filtros ativos
+let activeMuscleGroup = null;
+let activeEquipment = null;
+let cart = []; // Lista do carrinho
 
-// Popula os filtros de equipamentos
-function populateEquipmentFilters() {
-const filterContainer = document.getElementById("equipment-filters");
-equipamentos.forEach(equipamento => {
-  const div = document.createElement("div");
-  div.className = "filter-item";
-  div.innerText = equipamento;
-  div.onclick = () => filterByEquipment(equipamento);
-  filterContainer.appendChild(div);
-});
-}
+function addToCart(nomeExercicio) {
+  const series = prompt(`Quantas séries deseja para o exercício "${nomeExercicio}"?`, "3");
+  if (!series || isNaN(series) || series <= 0) {
+    alert("Número de séries inválido.");
+    return;
+  }
 
-// Filtra exercícios pelo grupo muscular
-function filterByMuscleGroup(grupo) {
-const filteredExercises = exercicios.filter(e => e.grupoMuscular === grupo);
-displayExercises(filteredExercises);
-}
+  // Verifica se o exercício já está no carrinho
+  const existingItem = cart.find(item => item.nome === nomeExercicio);
+  if (existingItem) {
+    alert("Este exercício já está no carrinho!");
+    return;
+  }
+   // Adiciona o exercício com séries ao carrinho
+   cart.push({ nome: nomeExercicio, series });
 
-// Filtra exercícios pelo tipo de equipamento
-function filterByEquipment(equipamento) {
-const filteredExercises = exercicios.filter(e => e.equipamento === equipamento);
-displayExercises(filteredExercises);
+   // Atualiza a lista no DOM
+   const cartList = document.getElementById("cart-list");
+   const listItem = document.createElement("li");
+   listItem.innerHTML = `${nomeExercicio} - Séries: ${series}`;
+   cartList.appendChild(listItem);
+ 
+   // Feedback para o usuário
+   alert(`O exercício "${nomeExercicio}" com ${series} séries foi adicionado ao carrinho!`);
+ }
+
+ function clearCart() {
+  const cartList = document.getElementById("cart-list");
+  cartList.innerHTML = ""; // Remove todos os itens do carrinho
+  cart = []; // Esvazia o array do carrinho
+  alert("O carrinho foi limpo!");
 }
 
 // Exibe exercícios na lista
 function displayExercises(exerciciosParaMostrar) {
-const exerciseList = document.getElementById("exercise-list");
-exerciseList.innerHTML = "";
-exerciciosParaMostrar.forEach(exercicio => {
-  const exerciseItem = document.createElement("div");
-  exerciseItem.className = "exercise-item";
-  exerciseItem.innerHTML = `
+  const exerciseList = document.getElementById("exercise-list");
+  exerciseList.innerHTML = ""; // Limpa a lista de exercícios antes de exibir
+  if (exerciciosParaMostrar.length === 0) {
+    exerciseList.innerHTML = "<p>Nenhum exercício encontrado.</p>";
+    return;
+  }
+  exerciciosParaMostrar.forEach(exercicio => {
+    const exerciseItem = document.createElement("div");
+    exerciseItem.className = "exercise-item";
+    exerciseItem.innerHTML = `
       <h3>${exercicio.nome}</h3>
       <p><strong>Grupo Muscular:</strong> ${exercicio.grupoMuscular}</p>
       <p><strong>Equipamento:</strong> ${exercicio.equipamento}</p>
@@ -167,29 +169,170 @@ exerciciosParaMostrar.forEach(exercicio => {
       <img class="thumbnail" src="${exercicio.linkVideo}" alt="${exercicio.nome}">
       <a href="${exercicio.linkVideoFull}" target="_blank">Ver Vídeo</a>
       <button onclick="addToCart('${exercicio.nome}')">Adicionar ao Carrinho</button>
-  `;
-  exerciseList.appendChild(exerciseItem);
-});
+    `;
+    exerciseList.appendChild(exerciseItem);
+  });
+}
+
+// Filtra exercícios com base no grupo muscular, equipamento e busca simultaneamente
+function filterExercises() {
+  const searchValue = document.getElementById("search-input").value.toLowerCase();
+
+  const filteredExercises = exercicios.filter((e) => {
+    const matchesMuscleGroup = activeMuscleGroup ? e.grupoMuscular === activeMuscleGroup : true;
+    const matchesEquipment = activeEquipment ? e.equipamento === activeEquipment : true;
+    const matchesSearch = e.nome.toLowerCase().includes(searchValue);
+
+    return matchesMuscleGroup && matchesEquipment && matchesSearch;
+  });
+
+  displayExercises(filteredExercises);
+}
+
+// Atualiza o filtro para grupo muscular
+function filterByMuscleGroup(grupo) {
+  // Ativa ou desativa o filtro de grupo muscular
+  activeMuscleGroup = activeMuscleGroup === grupo ? null : grupo;
+  filterExercises();
+
+    // Faz a tela rolar para a seção de equipamentos
+  const equipmentSection = document.querySelector(".equipamentos");
+  equipmentSection.scrollIntoView({ behavior: "smooth" });
+
+}
+
+// Atualiza o filtro para equipamento
+function filterByEquipment(equipamento) {
+  // Ativa ou desativa o filtro de equipamento
+  activeEquipment = activeEquipment === equipamento ? null : equipamento;
+  filterExercises();
+
+  const exercisesSection = document.querySelector(".exercicios-disponiveis");
+  exercisesSection.scrollIntoView({ behavior: "smooth" });
+
+}
+
+// Popula os filtros de grupo muscular
+function populateMuscleGroupFilters() {
+  const filterContainer = document.getElementById("muscle-group-filters");
+  gruposMusculares.forEach(grupo => {
+    const div = document.createElement("div");
+    div.className = "filter-item";
+    div.innerText = grupo;
+    div.onclick = () => filterByMuscleGroup(grupo);
+    filterContainer.appendChild(div);
+  });
+}
+
+// Popula os filtros de equipamentos
+function populateEquipmentFilters() {
+  const filterContainer = document.getElementById("equipment-filters");
+  equipamentos.forEach(equipamento => {
+    const div = document.createElement("div");
+    div.className = "filter-item";
+    div.innerText = equipamento;
+    div.onclick = () => filterByEquipment(equipamento);
+    filterContainer.appendChild(div);
+  });
+}
+
+// Exibe exercícios na lista
+function displayExercises(exerciciosParaMostrar) {
+    const exerciseList = document.getElementById("exercise-list");
+    exerciseList.innerHTML = ""; // Limpa a lista de exercícios antes de exibir
+    if (exerciciosParaMostrar.length === 0) {
+      exerciseList.innerHTML = "<p>Nenhum exercício encontrado.</p>";
+      return;
+    }else{
+        exerciciosParaMostrar.forEach(exercicio => {
+            const exerciseItem = document.createElement("div");
+            exerciseItem.className = "exercise-item";
+            exerciseItem.innerHTML = `
+              <h3>${exercicio.nome}</h3>
+              <p><strong>Grupo Muscular:</strong> ${exercicio.grupoMuscular}</p>
+              <p><strong>Equipamento:</strong> ${exercicio.equipamento}</p>
+              <p>${exercicio.descricao}</p>
+              <img class="thumbnail" src="${exercicio.linkVideo}" alt="${exercicio.nome}">
+              <a href="${exercicio.linkVideoFull}" target="_blank">Ver Vídeo</a>
+              <button onclick="addToCart('${exercicio.nome}')">Adicionar ao Carrinho</button>
+            `;
+            exerciseList.appendChild(exerciseItem);
+          });
+    }
 }
 
 // Função para adicionar exercício ao carrinho
 function addToCart(nomeExercicio) {
-const cartList = document.getElementById("cart-list");
-const listItem = document.createElement("li");
-listItem.innerText = nomeExercicio;
-cartList.appendChild(listItem);
+  // Verifica se o exercício já está no carrinho
+  if (cart.includes(nomeExercicio)) {
+    alert("Este exercício já foi adicionado ao carrinho!");
+    return;
+  }
+
+  // Adiciona o exercício ao carrinho
+  cart.push(nomeExercicio);
+  
+  // Atualiza a lista no DOM
+  const cartList = document.getElementById("cart-list");
+  const listItem = document.createElement("li");
+  listItem.innerText = nomeExercicio;
+  cartList.appendChild(listItem);
+
+  // Feedback para o usuário
+  alert(`O exercício "${nomeExercicio}" foi adicionado ao carrinho!`);
 }
 
-// Filtrar exercícios com base na pesquisa
-function filterExercises() {
-const searchValue = document.getElementById("search-input").value.toLowerCase();
-const filteredExercises = exercicios.filter(e => e.nome.toLowerCase().includes(searchValue));
-displayExercises(filteredExercises);
-}
+// Função de busca dinâmica
+document.getElementById("search-input").addEventListener("input", filterExercises);
 
 // Inicializa a página
 window.onload = () => {
-populateMuscleGroupFilters();
-populateEquipmentFilters();
-displayExercises(exercicios); // Mostra todos os exercícios inicialmente
+  populateMuscleGroupFilters();
+  populateEquipmentFilters();
+  displayExercises(exercicios); // Mostra todos os exercícios inicialmente
 };
+
+function gerarDieta() {
+  const objetivo = document.getElementById("objetivo").value;
+  const dietaLista = document.getElementById("dieta-lista");
+  const dietaGerada = document.getElementById("dieta-gerada");
+
+  // Limpa a lista anterior
+  dietaLista.innerHTML = "";
+
+  // Define as dietas para cada objetivo
+  const dietas = {
+    "perder-peso": [
+      "Café da manhã: 1 ovo cozido + 1 fatia de pão integral",
+      "Almoço: Salada de frango grelhado + legumes",
+      "Jantar: Sopa de legumes"
+    ],
+    "melhorar-saude": [
+      "Café da manhã: Frutas frescas + aveia",
+      "Almoço: Peixe grelhado + arroz integral + salada",
+      "Jantar: Omelete de legumes"
+    ],
+    "definir": [
+      "Café da manhã: 4 claras de ovo + batata-doce",
+      "Almoço: Frango grelhado + quinoa + brócolis",
+      "Jantar: Filé de peixe + salada"
+    ]
+  };
+
+  // Validação simples
+  if (!dietas[objetivo]) {
+    alert("Selecione um objetivo válido.");
+    return;
+  }
+
+  // Preenche a lista com base no objetivo
+  dietas[objetivo].forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    dietaLista.appendChild(li);
+  });
+
+  // Mostra a seção de dieta
+  dietaGerada.style.display = "block";
+
+}
