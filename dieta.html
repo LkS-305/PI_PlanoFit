@@ -6,6 +6,7 @@
     <title>Dieta</title>
     <link rel="stylesheet" href="./styles.css">
     <script src="https://kit.fontawesome.com/06ad468496.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="imagens/yellow_dumbbell_no_bg.jpg" type="image/png">
 </head>
 <body>
   <header>
@@ -85,7 +86,21 @@
     <div class="botao_continua">
         <a href="#" onclick="gerarDieta()">Continuar</a>
     </div>
-  </div>   
+  </div> 
+  
+  <div class="imc-calculator">
+    <h2>Calculadora de IMC</h2>
+    <p>Digite seu peso e altura para calcular o Índice de Massa Corporal.</p>
+    <div class="imc-inputs">
+      <label for="imc-peso">Peso (kg):</label>
+      <input type="number" id="imc-peso" placeholder="Ex: 70">
+      <label for="imc-altura">Altura (cm):</label>
+      <input type="number" id="imc-altura" placeholder="Ex: 170">
+    </div>
+    <button id="calcular-imc" onclick="calcularIMC()">Calcular IMC</button>
+    <div id="imc-resultado" class="imc-resultado"></div>
+  </div>
+  
 
   <!-- Seção para exibir a lista gerada -->
   <div id="dieta-gerada" class="dieta-gerada">
