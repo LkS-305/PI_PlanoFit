@@ -59,7 +59,6 @@ const exercicios = [
   { nome: "Crucifixo Inclinado", grupoMuscular: "Peitoral", equipamento: "Halteres", descricao: "Exercício de peito em banco inclinado", linkVideo: "https://exemplo.com/crucifixo-inclinado" },
   { nome: "Pullover", grupoMuscular: "Peitoral", equipamento: "Halteres", descricao: "Exercício de peito e dorsais", linkVideo: "https://exemplo.com/pullover" },
   { nome: "Supino Inclinado", grupoMuscular: "Peitoral", equipamento: "Banco", descricao: "Supino em banco inclinado para parte superior do peito", linkVideo: "https://exemplo.com/supino-inclinado" },
-  { nome: "Flexão de Braço com Bola", grupoMuscular: "Peitoral", equipamento: "Bola de Exercício", descricao: "Flexão de braço com os pés sobre a bola", linkVideo: "https://exemplo.com/flexao-bola" },
 
   // Bíceps
   { nome: "Rosca Direta", grupoMuscular: "Bíceps", equipamento: "Halteres", descricao: "Exercício para bíceps", linkVideo: "https://exemplo.com/rosca-direta" },
@@ -67,7 +66,6 @@ const exercicios = [
   { nome: "Rosca Concentrada", grupoMuscular: "Bíceps", equipamento: "Halteres", descricao: "Exercício para bíceps", linkVideo: "https://exemplo.com/rosca-concentrada" },
   { nome: "Rosca Scott", grupoMuscular: "Bíceps", equipamento: "Máquina", descricao: "Exercício para bíceps", linkVideo: "https://exemplo.com/rosca-scott" },
   { nome: "Rosca Inversa", grupoMuscular: "Bíceps", equipamento: "Barra", descricao: "Exercício para bíceps", linkVideo: "https://exemplo.com/rosca-inversa" },
-  { nome: "Rosca com Barra EZ", grupoMuscular: "Bíceps", equipamento: "Barra EZ", descricao: "Rosca com barra EZ para bíceps", linkVideo: "https://exemplo.com/rosca-barra-ez" },
 
   // Pernas
   { nome: "Agachamento Livre", grupoMuscular: "Pernas", equipamento: "Peso Corporal", descricao: "Exercício para pernas", linkVideo: "https://exemplo.com/agachamento-livre" },
@@ -79,11 +77,10 @@ const exercicios = [
   { nome: "Swing com Kettlebell", grupoMuscular: "Pernas", equipamento: "Kettlebell", descricao: "Swing com kettlebell para pernas e costas", linkVideo: "https://exemplo.com/swing-kettlebell" },
 
   // Costas
-  { nome: "Puxada Frontal", grupoMuscular: "Costas", equipamento: "Máquina", descricao: "Exercício para costas", linkVideo: "https://exemplo.com/puxada-frontal" },
+  { nome: "Puxada Frontal", grupoMuscular: "Costas", equipamento: "Máquina", descricao: "Pode variar o estímulo dependendo da distância entre as mãos e a pegada na barra (aberta ou fechada)", linkVideo: "https://exemplo.com/puxada-frontal" },
   { nome: "Remada Curvada", grupoMuscular: "Costas", equipamento: "Halteres", descricao: "Exercício para costas", linkVideo: "https://exemplo.com/remada-curvada" },
   { nome: "Levantamento Terra", grupoMuscular: "Costas", equipamento: "Barra", descricao: "Exercício para costas e pernas", linkVideo: "https://exemplo.com/levantamento-terra" },
-  { nome: "Puxada Costas", grupoMuscular: "Costas", equipamento: "Máquina", descricao: "Exercício para costas", linkVideo: "https://exemplo.com/puxada-costas" },
-  { nome: "Remada Alta", grupoMuscular: "Costas", equipamento: "Halteres", descricao: "Exercício para parte superior das costas", linkVideo: "https://exemplo.com/remada-alta" },
+  { nome: "Remada Baixa", grupoMuscular: "Costas", equipamento: "Máquina", descricao: "Exercício para parte inferior e dorsal", linkVideo: "https://exemplo.com/remada-alta" },
 
   // Cardio
   { nome: "Corrida", grupoMuscular: "Cardio", equipamento: "Máquina de Cardio", descricao: "Corrida para treino cardiovascular", linkVideo: "https://exemplo.com/corrida" },
@@ -92,15 +89,13 @@ const exercicios = [
 
   // Abdômen
   { nome: "Prancha", grupoMuscular: "Abdômen", equipamento: "Peso Corporal", descricao: "Exercício isométrico para abdômen", linkVideo: "https://exemplo.com/prancha" },
-  { nome: "Abdominal Crunch", grupoMuscular: "Abdômen", equipamento: "Peso Corporal", descricao: "Exercício para abdômen", linkVideo: "https://exemplo.com/abdominal-crunch" },
+  { nome: "Abdominal Militar", grupoMuscular: "Abdômen", equipamento: "Peso Corporal", descricao: "Exercício para abdômen", linkVideo: "https://exemplo.com/abdominal-crunch" },
   { nome: "Elevação de Pernas", grupoMuscular: "Abdômen", equipamento: "Peso Corporal", descricao: "Exercício para abdômen", linkVideo: "https://exemplo.com/elevacao-pernas" },
-  { nome: "Russian Twist", grupoMuscular: "Abdômen", equipamento: "Halteres", descricao: "Exercício para oblíquos", linkVideo: "https://exemplo.com/russian-twist" },
 
   // Antebraços
   { nome: "Rosca Inversa", grupoMuscular: "Antebraços", equipamento: "Barra", descricao: "Exercício para antebraços", linkVideo: "https://exemplo.com/rosca-inversa" },
 
   // Glúteos
-  { nome: "Elevação de Quadril", grupoMuscular: "Glúteos", equipamento: "Peso Corporal", descricao: "Exercício para glúteos", linkVideo: "https://exemplo.com/elevacao-quadril" },
   { nome: "Agachamento Sumô", grupoMuscular: "Glúteos", equipamento: "Halteres", descricao: "Exercício para glúteos", linkVideo: "https://exemplo.com/agachamento-sumo" },
 
   // Ombros
