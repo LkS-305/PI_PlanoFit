@@ -26,7 +26,7 @@ const equipamentos = [
 ];
 const exercicios = [
     // Peitoral
-    { nome: "Supino Reto", grupoMuscular: "Peitoral", equipamento: "Banco", descricao: "Exercício para peito", linkVideo: "https://exemplo.com/supino-reto" },
+    { nome: "Supino Reto", grupoMuscular: "Peitoral", equipamento: "Banco", descricao: "Exercício para peito" },
     { nome: "Peck Deck", grupoMuscular: "Peitoral", equipamento: "Máquina", descricao: "Exercício para peito", linkVideo: "https://exemplo.com/peck-deck" },
     { nome: "Flexão de Braço", grupoMuscular: "Peitoral", equipamento: "Peso Corporal", descricao: "Flexão de braço para peito e tríceps", linkVideo: "https://exemplo.com/flexao-braco" },
     { nome: "Crucifixo Inclinado", grupoMuscular: "Peitoral", equipamento: "Halteres", descricao: "Exercício de peito em banco inclinado", linkVideo: "https://exemplo.com/crucifixo-inclinado" },

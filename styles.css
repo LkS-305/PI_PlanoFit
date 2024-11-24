@@ -825,7 +825,7 @@ section form textarea:focus {
     margin: 5px 0;
   }
   
-  .exercise-item a {
+  .exercise-item button {
     display: inline-block;
     margin-top: 10px;
     padding: 8px 12px;
@@ -837,10 +837,16 @@ section form textarea:focus {
     border: 2px solid #AF9800;
   }
   
-  .exercise-item a:hover {
+  .exercise-item button:hover {
     background-color: transparent;
   }
   
+
+  .thumbnail {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
   
   .cart {
     margin-top: 30px;
