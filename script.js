@@ -53,90 +53,64 @@ const equipamentos = [
 ];
 const exercicios = [
   // Peitoral
-  { nome: "Supino Reto", grupoMuscular: "Peitoral", equipamento: "Banco", descricao: "Exercício para peito", linkVideo: "https://exemplo.com/supino-reto" },
-  { nome: "Peck Deck", grupoMuscular: "Peitoral", equipamento: "Máquina", descricao: "Exercício para peito", linkVideo: "https://exemplo.com/peck-deck" },
-  { nome: "Flexão de Braço", grupoMuscular: "Peitoral", equipamento: "Peso Corporal", descricao: "Flexão de braço para peito e tríceps", linkVideo: "https://exemplo.com/flexao-braco" },
-  { nome: "Crucifixo Inclinado", grupoMuscular: "Peitoral", equipamento: "Halteres", descricao: "Exercício de peito em banco inclinado", linkVideo: "https://exemplo.com/crucifixo-inclinado" },
-  { nome: "Pullover", grupoMuscular: "Peitoral", equipamento: "Halteres", descricao: "Exercício de peito e dorsais", linkVideo: "https://exemplo.com/pullover" },
-  { nome: "Supino Inclinado", grupoMuscular: "Peitoral", equipamento: "Banco", descricao: "Supino em banco inclinado para parte superior do peito", linkVideo: "https://exemplo.com/supino-inclinado" },
+  { nome: "Supino Reto", grupoMuscular: "Peitoral", equipamento: "Banco", descricao: "Exercício para peito", imagem: "imagens_exercicios/supino_reto.jpg" },
+  { nome: "Peck Deck", grupoMuscular: "Peitoral", equipamento: "Máquina", descricao: "Exercício para peito", imagem: "imagens_exercicios/pec_deck.png" },
+  { nome: "Flexão de Braço", grupoMuscular: "Peitoral", equipamento: "Peso Corporal", descricao: "Flexão de braço para peito e tríceps", imagem: "imagens_exercicios/flexao_braco.jpg" },
+  { nome: "Crucifixo Inclinado", grupoMuscular: "Peitoral", equipamento: "Halteres", descricao: "Exercício de peito em banco inclinado", imagem: "imagens_exercicios/crucifixo_inclinado.jpg" },
+  { nome: "Pullover", grupoMuscular: "Peitoral", equipamento: "Halteres", descricao: "Exercício de peito e dorsais", imagem: "imagens_exercicios/pullover.jpeg" },
+  { nome: "Supino Inclinado", grupoMuscular: "Peitoral", equipamento: "Banco", descricao: "Supino em banco inclinado para parte superior do peito", imagem: "imagens_exercicios/supino_inclinado.png" },
 
   // Bíceps
-  { nome: "Rosca Direta", grupoMuscular: "Bíceps", equipamento: "Halteres", descricao: "Exercício para bíceps", linkVideo: "https://exemplo.com/rosca-direta" },
-  { nome: "Rosca Martelo", grupoMuscular: "Bíceps", equipamento: "Halteres", descricao: "Exercício para bíceps", linkVideo: "https://exemplo.com/rosca-martelo" },
-  { nome: "Rosca Concentrada", grupoMuscular: "Bíceps", equipamento: "Halteres", descricao: "Exercício para bíceps", linkVideo: "https://exemplo.com/rosca-concentrada" },
-  { nome: "Rosca Scott", grupoMuscular: "Bíceps", equipamento: "Máquina", descricao: "Exercício para bíceps", linkVideo: "https://exemplo.com/rosca-scott" },
-  { nome: "Rosca Inversa", grupoMuscular: "Bíceps", equipamento: "Barra", descricao: "Exercício para bíceps", linkVideo: "https://exemplo.com/rosca-inversa" },
+  { nome: "Rosca Direta", grupoMuscular: "Bíceps", equipamento: "Halteres", descricao: "Exercício para bíceps", imagem: "imagens_exercicios/rosca_direta.png" },
+  { nome: "Rosca Martelo", grupoMuscular: "Bíceps", equipamento: "Halteres", descricao: "Exercício para bíceps", imagem: "imagens_exercicios/rosca_martelo.png" },
+  { nome: "Rosca Concentrada", grupoMuscular: "Bíceps", equipamento: "Halteres", descricao: "Exercício para bíceps", imagem: "imagens_exercicios/rosca_concentrada.jpeg" },
+  { nome: "Rosca Scott", grupoMuscular: "Bíceps", equipamento: "Máquina", descricao: "Exercício para bíceps", imagem: "imagens_exercicios/rosca_scott.png" },
+  { nome: "Rosca Inversa", grupoMuscular: "Bíceps", equipamento: "Barra", descricao: "Exercício para bíceps", imagem: "imagens_exercicios/rosca_inversa.jpg" },
 
   // Pernas
-  { nome: "Agachamento Livre", grupoMuscular: "Pernas", equipamento: "Peso Corporal", descricao: "Exercício para pernas", linkVideo: "https://exemplo.com/agachamento-livre" },
-  { nome: "Leg Press", grupoMuscular: "Pernas", equipamento: "Máquina", descricao: "Exercício para pernas", linkVideo: "https://exemplo.com/leg-press" },
-  { nome: "Cadeira Extensora", grupoMuscular: "Pernas", equipamento: "Máquina", descricao: "Exercício para pernas", linkVideo: "https://exemplo.com/cadeira-extensora" },
-  { nome: "Afundo", grupoMuscular: "Pernas", equipamento: "Halteres", descricao: "Exercício unilateral para pernas", linkVideo: "https://exemplo.com/afundo" },
-  { nome: "Flexão de Joelhos", grupoMuscular: "Pernas", equipamento: "Máquina", descricao: "Exercício para isquiotibiais", linkVideo: "https://exemplo.com/flexao-joelhos" },
-  { nome: "Agachamento com Peso Corporal", grupoMuscular: "Pernas", equipamento: "Peso Corporal", descricao: "Agachamento usando apenas o peso do corpo", linkVideo: "https://exemplo.com/agachamento-peso-corporal" },
-  { nome: "Swing com Kettlebell", grupoMuscular: "Pernas", equipamento: "Kettlebell", descricao: "Swing com kettlebell para pernas e costas", linkVideo: "https://exemplo.com/swing-kettlebell" },
+  { nome: "Agachamento Livre", grupoMuscular: "Pernas", equipamento: "Peso Corporal", descricao: "Exercício para pernas", imagem: "imagens_exercicios/agachamento_livre.png" },
+  { nome: "Leg Press", grupoMuscular: "Pernas", equipamento: "Máquina", descricao: "Exercício para pernas", imagem: "imagens_exercicios/leg_press.png" },
+  { nome: "Cadeira Extensora", grupoMuscular: "Pernas", equipamento: "Máquina", descricao: "Exercício para pernas", imagem: "imagens_exercicios/extensora.png" },
+  { nome: "Afundo", grupoMuscular: "Pernas", equipamento: "Halteres", descricao: "Exercício unilateral para pernas", imagem: "imagens_exercicios/afundo.png" },
+  { nome: "Flexão de Joelhos", grupoMuscular: "Pernas", equipamento: "Máquina", descricao: "Exercício para isquiotibiais", imagem: "imagens_exercicios/cadeira_flexora.png" },
+  { nome: "Agachamento com Peso Corporal", grupoMuscular: "Pernas", equipamento: "Peso Corporal", descricao: "Agachamento usando apenas o peso do corpo", imagem: "imagens_exercicios/agachamento_corpo.png" },
+  { nome: "Swing com Kettlebell", grupoMuscular: "Pernas", equipamento: "Kettlebell", descricao: "Swing com kettlebell para pernas e costas", imagem: "imagens_exercicios/swing_kettlebell.png" },
 
   // Costas
-  { nome: "Puxada Frontal", grupoMuscular: "Costas", equipamento: "Máquina", descricao: "Pode variar o estímulo dependendo da distância entre as mãos e a pegada na barra (aberta ou fechada)", linkVideo: "https://exemplo.com/puxada-frontal" },
-  { nome: "Remada Curvada", grupoMuscular: "Costas", equipamento: "Halteres", descricao: "Exercício para costas", linkVideo: "https://exemplo.com/remada-curvada" },
-  { nome: "Levantamento Terra", grupoMuscular: "Costas", equipamento: "Barra", descricao: "Exercício para costas e pernas", linkVideo: "https://exemplo.com/levantamento-terra" },
-  { nome: "Remada Baixa", grupoMuscular: "Costas", equipamento: "Máquina", descricao: "Exercício para parte inferior e dorsal", linkVideo: "https://exemplo.com/remada-alta" },
+  { nome: "Puxada Frontal", grupoMuscular: "Costas", equipamento: "Máquina", descricao: "Pode variar o estímulo dependendo da distância entre as mãos e a pegada na barra (aberta ou fechada)", imagem: "imagens_exercicios/puxada_alta.png" },
+  { nome: "Remada Curvada", grupoMuscular: "Costas", equipamento: "Halteres", descricao: "Exercício para costas", imagem: "imagens_exercicios/remada_curvada.png" },
+  { nome: "Levantamento Terra", grupoMuscular: "Costas", equipamento: "Barra", descricao: "Exercício para costas e pernas", imagem: "imagens_exercicios/levantamento_terra.png" },
+  { nome: "Remada Baixa", grupoMuscular: "Costas", equipamento: "Máquina", descricao: "Exercício para parte inferior e dorsal", imagem: "imagens_exercicios/remada_baixa.png" },
 
   // Cardio
-  { nome: "Corrida", grupoMuscular: "Cardio", equipamento: "Máquina de Cardio", descricao: "Corrida para treino cardiovascular", linkVideo: "https://exemplo.com/corrida" },
-  { nome: "Bicicleta Ergométrica", grupoMuscular: "Cardio", equipamento: "Máquina de Cardio", descricao: "Bicicleta para cardio", linkVideo: "https://exemplo.com/bicicleta" },
-  { nome: "Pular Corda", grupoMuscular: "Cardio", equipamento: "Peso Corporal", descricao: "Pular corda para cardio", linkVideo: "https://exemplo.com/pular-corda" },
+  { nome: "Corrida", grupoMuscular: "Cardio", equipamento: "Máquina de Cardio", descricao: "Corrida para treino cardiovascular", imagem: "imagens_exercicios/corrida.jpg" },
+  { nome: "Bicicleta Ergométrica", grupoMuscular: "Cardio", equipamento: "Máquina de Cardio", descricao: "Bicicleta para cardio", imagem: "imagens_exercicios/bicicleta.jpg" },
+  { nome: "Pular Corda", grupoMuscular: "Cardio", equipamento: "Peso Corporal", descricao: "Pular corda para cardio", imagem: "imagens_exercicios/pular_corda.png" },
 
   // Abdômen
-  { nome: "Prancha", grupoMuscular: "Abdômen", equipamento: "Peso Corporal", descricao: "Exercício isométrico para abdômen", linkVideo: "https://exemplo.com/prancha" },
-  { nome: "Abdominal Militar", grupoMuscular: "Abdômen", equipamento: "Peso Corporal", descricao: "Exercício para abdômen", linkVideo: "https://exemplo.com/abdominal-crunch" },
-  { nome: "Elevação de Pernas", grupoMuscular: "Abdômen", equipamento: "Peso Corporal", descricao: "Exercício para abdômen", linkVideo: "https://exemplo.com/elevacao-pernas" },
+  { nome: "Prancha", grupoMuscular: "Abdômen", equipamento: "Peso Corporal", descricao: "Exercício isométrico para abdômen", imagem: "imagens_exercicios/prancha.png" },
+  { nome: "Abdominal Militar", grupoMuscular: "Abdômen", equipamento: "Peso Corporal", descricao: "Exercício para abdômen", imagem: "imagens_exercicios/abdominal_militar.jpg" },
+  { nome: "Elevação de Pernas", grupoMuscular: "Abdômen", equipamento: "Peso Corporal", descricao: "Exercício para abdômen", imagem: "imagens_exercicios/elevacao_perna.jpeg" },
 
   // Antebraços
-  { nome: "Rosca Inversa", grupoMuscular: "Antebraços", equipamento: "Barra", descricao: "Exercício para antebraços", linkVideo: "https://exemplo.com/rosca-inversa" },
+  { nome: "Rosca Inversa", grupoMuscular: "Antebraços", equipamento: "Barra", descricao: "Exercício para antebraços", imagem: "imagens_exercicios/rosca_inversa.jpg" },
 
   // Glúteos
-  { nome: "Agachamento Sumô", grupoMuscular: "Glúteos", equipamento: "Halteres", descricao: "Exercício para glúteos", linkVideo: "https://exemplo.com/agachamento-sumo" },
+  { nome: "Agachamento Sumô", grupoMuscular: "Glúteos", equipamento: "Halteres", descricao: "Exercício para glúteos", imagem: "imagens_exercicios/agachamento_sumo.png" },
 
   // Ombros
-  { nome: "Desenvolvimento com Halteres", grupoMuscular: "Ombros", equipamento: "Halteres", descricao: "Exercício para ombros", linkVideo: "https://exemplo.com/desenvolvimento-halteres" },
-  { nome: "Elevação Lateral", grupoMuscular: "Ombros", equipamento: "Halteres", descricao: "Exercício para ombros", linkVideo: "https://exemplo.com/elevacao-lateral" },
+  { nome: "Desenvolvimento com Halteres", grupoMuscular: "Ombros", equipamento: "Halteres", descricao: "Exercício para ombros", imagem: "imagens_exercicios/desenvolvimento_halter.png" },
+  { nome: "Elevação Lateral", grupoMuscular: "Ombros", equipamento: "Halteres", descricao: "Exercício para ombros", imagem: "imagens_exercicios/elecacao_lateral.png" },
 
   // Tríceps
-  { nome: "Tríceps Testa", grupoMuscular: "Tríceps", equipamento: "Halteres", descricao: "Exercício para tríceps", linkVideo: "https://exemplo.com/triceps-testa" },
-  { nome: "Mergulho", grupoMuscular: "Tríceps", equipamento: "Banco", descricao: "Exercício para tríceps", linkVideo: "https://exemplo.com/mergulho" }
+  { nome: "Tríceps Testa", grupoMuscular: "Tríceps", equipamento: "Halteres", descricao: "Exercício para tríceps", imagem: "imagens_exercicios/triceps_testa.png" },
+  { nome: "Mergulho", grupoMuscular: "Tríceps", equipamento: "Banco", descricao: "Exercício para tríceps", imagem: "imagens_exercicios/mergulho.png" }
 ];
 
 // Variáveis para armazenar filtros ativos
 let activeMuscleGroup = null;
 let activeEquipment = null;
 let cart = []; // Lista do carrinho
-
-function addToCart(nomeExercicio) {
-  const series = prompt(`Quantas séries deseja para o exercício "${nomeExercicio}"?`, "3");
-  if (!series || isNaN(series) || series <= 0) {
-    alert("Número de séries inválido.");
-    return;
-  }
-
-  // Verifica se o exercício já está no carrinho
-  const existingItem = cart.find(item => item.nome === nomeExercicio);
-  if (existingItem) {
-    alert("Este exercício já está no carrinho!");
-    return;
-  }
-   // Adiciona o exercício com séries ao carrinho
-   cart.push({ nome: nomeExercicio, series });
-
-   // Atualiza a lista no DOM
-   const cartList = document.getElementById("cart-list");
-   const listItem = document.createElement("li");
-   listItem.innerHTML = `${nomeExercicio} - Séries: ${series}`;
-   cartList.appendChild(listItem);
- 
-   // Feedback para o usuário
-   alert(`O exercício "${nomeExercicio}" com ${series} séries foi adicionado ao carrinho!`);
- }
 
  function clearCart() {
   const cartList = document.getElementById("cart-list");
@@ -161,9 +135,9 @@ function displayExercises(exerciciosParaMostrar) {
       <p><strong>Grupo Muscular:</strong> ${exercicio.grupoMuscular}</p>
       <p><strong>Equipamento:</strong> ${exercicio.equipamento}</p>
       <p>${exercicio.descricao}</p>
-      <img class="thumbnail" src="${exercicio.linkVideo}" alt="${exercicio.nome}">
-      <a href="${exercicio.linkVideoFull}" target="_blank">Ver Vídeo</a>
-      <button onclick="addToCart('${exercicio.nome}')">Adicionar ao Carrinho</button>
+      <img class="thumbnail" src="${exercicio.imagem}" alt="${exercicio.nome}">
+      <br>
+      <button class = "filter-item" onclick="addToCart('${exercicio.nome}')">Adicionar ao Carrinho</button>
     `;
     exerciseList.appendChild(exerciseItem);
   });
@@ -229,31 +203,6 @@ function populateEquipmentFilters() {
     div.onclick = () => filterByEquipment(equipamento);
     filterContainer.appendChild(div);
   });
-}
-
-// Exibe exercícios na lista
-function displayExercises(exerciciosParaMostrar) {
-    const exerciseList = document.getElementById("exercise-list");
-    exerciseList.innerHTML = ""; // Limpa a lista de exercícios antes de exibir
-    if (exerciciosParaMostrar.length === 0) {
-      exerciseList.innerHTML = "<p>Nenhum exercício encontrado.</p>";
-      return;
-    }else{
-        exerciciosParaMostrar.forEach(exercicio => {
-            const exerciseItem = document.createElement("div");
-            exerciseItem.className = "exercise-item";
-            exerciseItem.innerHTML = `
-              <h3>${exercicio.nome}</h3>
-              <p><strong>Grupo Muscular:</strong> ${exercicio.grupoMuscular}</p>
-              <p><strong>Equipamento:</strong> ${exercicio.equipamento}</p>
-              <p>${exercicio.descricao}</p>
-              <img class="thumbnail" src="${exercicio.linkVideo}" alt="${exercicio.nome}">
-              <a href="${exercicio.linkVideoFull}" target="_blank">Ver Vídeo</a>
-              <button onclick="addToCart('${exercicio.nome}')">Adicionar ao Carrinho</button>
-            `;
-            exerciseList.appendChild(exerciseItem);
-          });
-    }
 }
 
 // Função para adicionar exercício ao carrinho
@@ -330,4 +279,38 @@ function gerarDieta() {
   // Mostra a seção de dieta
   dietaGerada.style.display = "block";
 
+}
+
+
+
+function calcularIMC() {
+  const peso = parseFloat(document.getElementById("imc-peso").value);
+  const alturaCm = parseFloat(document.getElementById("imc-altura").value);
+
+  // Validação simples
+  if (isNaN(peso) || isNaN(alturaCm) || peso <= 0 || alturaCm <= 0) {
+    document.getElementById("imc-resultado").textContent = "Por favor, insira valores válidos para peso e altura.";
+    return;
+  }
+
+  // Convertendo altura para metros
+  const alturaM = alturaCm / 100;
+
+  // Calculando o IMC
+  const imc = (peso / (alturaM * alturaM)).toFixed(1);
+
+  // Determinando a categoria do IMC
+  let categoria = "";
+  if (imc < 18.5) {
+    categoria = "Abaixo do peso";
+  } else if (imc >= 18.5 && imc < 24.9) {
+    categoria = "Peso normal";
+  } else if (imc >= 25 && imc < 29.9) {
+    categoria = "Sobrepeso";
+  } else {
+    categoria = "Obesidade";
+  }
+
+  // Exibindo o resultado
+  document.getElementById("imc-resultado").innerHTML = `Seu IMC é <strong>${imc}</strong> (${categoria}).`;
 }
