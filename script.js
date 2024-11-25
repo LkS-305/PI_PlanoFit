@@ -286,3 +286,37 @@ function gerarDieta() {
   dietaGerada.style.display = "block";
 
 }
+
+
+
+function calcularIMC() {
+  const peso = parseFloat(document.getElementById("imc-peso").value);
+  const alturaCm = parseFloat(document.getElementById("imc-altura").value);
+
+  // Validação simples
+  if (isNaN(peso) || isNaN(alturaCm) || peso <= 0 || alturaCm <= 0) {
+    document.getElementById("imc-resultado").textContent = "Por favor, insira valores válidos para peso e altura.";
+    return;
+  }
+
+  // Convertendo altura para metros
+  const alturaM = alturaCm / 100;
+
+  // Calculando o IMC
+  const imc = (peso / (alturaM * alturaM)).toFixed(1);
+
+  // Determinando a categoria do IMC
+  let categoria = "";
+  if (imc < 18.5) {
+    categoria = "Abaixo do peso";
+  } else if (imc >= 18.5 && imc < 24.9) {
+    categoria = "Peso normal";
+  } else if (imc >= 25 && imc < 29.9) {
+    categoria = "Sobrepeso";
+  } else {
+    categoria = "Obesidade";
+  }
+
+  // Exibindo o resultado
+  document.getElementById("imc-resultado").innerHTML = `Seu IMC é <strong>${imc}</strong> (${categoria}).`;
+}

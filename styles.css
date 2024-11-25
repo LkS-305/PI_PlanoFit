@@ -761,24 +761,27 @@ section form textarea:focus {
     border-radius: 20px;
     font-weight: bold;
     width: 90%;
-    height: 80%;
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 colunas */
-    grid-template-rows: repeat(2, auto); /* 2 linhas com altura automática */
-    gap: 20px;
-    justify-content: center;
-    padding: 60px;
-    margin-bottom: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas dinâmicas */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 40px;
+    margin: 20px auto;
   }
   
   .filter-item {
     cursor: pointer;
+<<<<<<< HEAD
     justify-content: center;
     text-align: center;
+=======
+>>>>>>> b694d68a3c9ded79b4c6e917a3c4e277a08c724c
     display: flex;
+    justify-content: center;
     align-items: center;
-    width: 120px;
-    height: 55px;
+    width: 150px; /* Tamanho fixo para os botões */
+    height: 50px; /* Altura fixa */
     padding: 10px;
     border: 2px solid #AF9800;
     border-radius: 10px;
@@ -787,6 +790,12 @@ section form textarea:focus {
     font-weight: bold;
     transition: background-color 0.3s, transform 0.2s;
   }
+  
+  .filter-item:hover {
+    background-color: #AF9800;
+    transform: scale(1.05);
+  }
+  
   .equipamentos{
     display: flex;
     flex-direction: column;
@@ -1189,4 +1198,69 @@ footer a:hover {
   .botao_continua a {
     width: 80%;
   }
+}
+
+
+
+.imc-calculator {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: var(--card-bg-color);
+  border: 2px solid var(--highlight-color);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px var(--card-hover-shadow);
+  transition: transform 0.3s;
+}
+
+.imc-calculator:hover {
+  transform: scale(1.03);
+}
+
+.imc-calculator h2 {
+  color: var(--highlight-color);
+  margin-bottom: 10px;
+}
+
+.imc-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.imc-inputs label {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.imc-inputs input {
+  padding: 10px;
+  border: 1px solid var(--highlight-color);
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#calcular-imc {
+  background-color: var(--button-bg-color);
+  color: var(--text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#calcular-imc:hover {
+  background-color: var(--button-hover-bg-color);
+  color: #ffffff;
+}
+
+.imc-resultado {
+  margin-top: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--highlight-color);
 }
