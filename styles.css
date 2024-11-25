@@ -765,6 +765,7 @@ section form textarea:focus {
   .filter-item {
     cursor: pointer;
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     width: 150px; /* Tamanho fixo para os botões */
@@ -776,6 +777,13 @@ section form textarea:focus {
     color: #FFFFFF;
     font-weight: bold;
     transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .thumbnail{
+    min-width: 150px;
+    max-width: 150px;
+    min-height: 150px;
+    max-height: 150px;
   }
   
   .filter-item:hover {
