@@ -747,6 +747,14 @@ section form textarea:focus {
     margin-bottom: 50px;
     margin-top: 20px;
   }
+
+  .thumbnail{
+    max-width: 150px;
+    max-height: 150px;
+    min-height: 150px;
+    min-width: 150px;
+  }
+
   .filter-container {
     background-color: var(--card-bg-color);
     color: #000000;
@@ -766,6 +774,7 @@ section form textarea:focus {
   .filter-item {
     cursor: pointer;
     justify-content: center;
+    text-align: center;
     display: flex;
     align-items: center;
     width: 120px;
