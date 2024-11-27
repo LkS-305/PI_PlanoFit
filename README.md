@@ -31,10 +31,10 @@ Contato
 
 
 👥 Equipe Desenvolvedora
-Lucas Kitsuta Sabino 
-Daniel Picconi Alquete
-Tales Martins de Moraes
-Victor Augusto Trevizan de Souza
+- Lucas Kitsuta Sabino (Lider)
+- Daniel Picconi Alquete
+- Tales Martins de Moraes
+- Victor Augusto Trevizan de Souza
 
 📧 Contato
 Email: suporte@planofit.com
