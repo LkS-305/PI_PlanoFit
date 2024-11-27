@@ -1,12 +1,12 @@
 PlanoFit é um site desenvolvido para auxiliar usuários na montagem de treinos e dietas personalizadas, promovendo um estilo de vida mais saudável. O projeto foi desenvolvido como parte de um projeto integrador para o 2º Período.
 
-🌟 Visão Geral
+🌟 Visão Geral <br>
 PlanoFit combina simplicidade e funcionalidade para oferecer:
 
-Montagem de treinos: Filtragem por grupo muscular e equipamentos.
-Dieta personalizada: Baseada em dados individuais e objetivos de saúde.
-Calculadora de IMC: Avaliação do índice de massa corporal de forma simples e prática.
-Acesse o projeto no GitHub Pages: PlanoFit
+- Montagem de treinos: Filtragem por grupo muscular e equipamentos.
+- Dieta personalizada: Baseada em dados individuais e objetivos de saúde.
+- Calculadora de IMC: Avaliação do índice de massa corporal de forma simples e prática.
+- Acesse o projeto no GitHub Pages: PlanoFit
 
 🚀 Tecnologias Utilizadas
 - HTML5: Estrutura das páginas.
@@ -36,9 +36,5 @@ Contato
 - Tales Martins de Moraes
 - Victor Augusto Trevizan de Souza
 
-📧 Contato
-Email: suporte@planofit.com
-Telefone: (11) 1234-5678
-Horário de atendimento: Segunda a Sexta, das 9h às 18h
-📌 Licença
-Este projeto é apenas para fins acadêmicos e integra diferentes matérias do curso.
+Este projeto é apenas para fins acadêmicos e integra diferentes matérias do curso.<br>
+Link para o github: https://github.com/LkS-305/PI_PlanoFit
