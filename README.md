@@ -9,9 +9,9 @@ Calculadora de IMC: Avaliação do índice de massa corporal de forma simples e 
 Acesse o projeto no GitHub Pages: PlanoFit
 
 🚀 Tecnologias Utilizadas
-HTML5: Estrutura das páginas.
-CSS3: Estilização visual do site.
-JavaScript: Funcionalidades dinâmicas como filtros, calculadoras e interatividade.
+- HTML5: Estrutura das páginas.
+- CSS3: Estilização visual do site.
+- JavaScript: Funcionalidades dinâmicas como filtros, calculadoras e interatividade.
 📸 Imagens do Projeto
 Página Inicial
 
