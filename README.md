@@ -1,4 +1,6 @@
-PlanoFit é um site desenvolvido para auxiliar usuários na montagem de treinos e dietas personalizadas, promovendo um estilo de vida mais saudável. O projeto foi desenvolvido como parte de um projeto integrador para o 2º Período.
+PlanoFit é um site desenvolvido para auxiliar usuários na montagem de treinos e dietas personalizadas, promovendo um estilo de vida mais saudável. O projeto foi desenvolvido como parte de um projeto integrador para o 2º Período.<br>
+Link para o site: https://lks-305.github.io/PI_PlanoFit/<br>
+Link para o github: https://github.com/LkS-305/PI_PlanoFit
 
 🌟 Visão Geral <br>
 PlanoFit combina simplicidade e funcionalidade para oferecer:
@@ -36,5 +38,4 @@ Contato
 - Tales Martins de Moraes
 - Victor Augusto Trevizan de Souza
 
-Este projeto é apenas para fins acadêmicos e integra diferentes matérias do curso.<br>
-Link para o github: https://github.com/LkS-305/PI_PlanoFit
+Este projeto é apenas para fins acadêmicos e integra diferentes matérias do curso.
