@@ -21,13 +21,8 @@ Página Inicial
 Montagem de Treino
 ![image](https://github.com/user-attachments/assets/f74beb39-551a-4748-9b01-08272ea79c6c)
 
-
-Calculadora de IMC
-![image](https://github.com/user-attachments/assets/465cede5-b01a-4863-a7bb-bba7096f909d)
-
-
 👥 Equipe Desenvolvedora
-- Lucas Kitsuta Sabino (Lider)
+- Lucas Kitsuta Sabino 
 - Daniel Picconi Alquete
 - Tales Martins de Moraes
 - Victor Augusto Trevizan de Souza
