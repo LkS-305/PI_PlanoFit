@@ -17,6 +17,7 @@ PlanoFit combina simplicidade e funcionalidade para oferecer:
 📸 Imagens do Projeto
 Página Inicial
 ![image](https://github.com/user-attachments/assets/ac7f3430-11a6-4cc5-917d-e3791b1d1ab3) ![image](https://github.com/user-attachments/assets/f74beb39-551a-4748-9b01-08272ea79c6c)
+
 👥 Equipe Desenvolvedora
 - Lucas Kitsuta Sabino 
 - Daniel Picconi Alquete
